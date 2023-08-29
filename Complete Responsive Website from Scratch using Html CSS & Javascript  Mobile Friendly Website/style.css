@@ -1,0 +1,550 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* TIRAR ATRIBUTOOS, E COLOCAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* TAMANHO DA FONTE E COR */
+p {
+    font-size: 300;
+    color: #111;
+}
+
+/* PAG MAIOR NA PARTE SUL */
+body {
+    min-height: 1000px;
+}
+
+/* POSICIONAMENTO DE ITENS E SEU TAMANHO */
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/bg.jpg);
+    background-size: cover;
+}
+
+/* POSIÇAO DO TEXTO E MANHO */
+.banner .content {
+    max-width: 900px;
+    text-align: center;
+}
+
+/* TAMANHO DO TITULO E COR */
+.banner .content h2 {
+    font-size: 5em;
+    color: #fff;
+}
+
+/* TAMANHO DO PARAGRAFO E COR */
+.banner .content p {
+    font-size: 1em;
+    color: #fff;
+}
+
+/* TAMANHO DA LETRA E COR, COR DA MOLDURA E TAMANHO, ESPAÇAMENTO DO TEXTO, ESPAÇO ENTRE AS LETRAS DO BOTAO,ANIMAÇAO DO BOTAO */
+.btn {
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+/* ACAO AO PASSAR O MAUSE */
+.btn:hover {
+    letter-spacing: 6px;
+}
+
+/* POSICIONAMENTO E ANIMAÇAO */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+/* MENU SUPERIOR COM FUNDO BRANCO QUANDO MOVIMENTA A PAG PARA BAIXO */
+header.sticky {
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* COR TAMANHO DA FONTE E TIRAR DECORAÇAO */
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+/* COR DO '.' FINAL */
+header .logo span {
+    color: #ff0157;
+}
+
+/* COR DO LOGO QUANDO VC BAIXA A PAG */
+header.sticky .logo {
+    color: #111;
+}
+
+/* POSICIONANDO TODO MENU SUPERIOR EM POSIÇAO HORIZONTAL */
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+/* COLOCANDO ESPAÇAMENTO ENTRE OS BOTOES SUPERIOR, TIRANDO PONTO DO LADO */
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+/* TIRANDO A DECORAÇAO, COLOCANDO COR E TAMANHO DA FONTE */
+header .navigation li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+
+/* COR DO MENU QUANDO ABAIXA A PAG */
+header.sticky .navigation li a {
+    color: #111;
+}
+
+/* COR DO MENU MUDA QUANDO INTERAGIR COM MAUSE */
+header .navigation li a:hover {
+    color:#ff0157 ;
+}
+
+/* ESPAÇAMENTO DO TEXTO DA MARGEM DA PAG */
+section {
+    padding: 100px;
+}
+
+/* COLOCANDO TEXTO NO LADO DA FOTO DA OESTE */
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* TAMANHO DO TEXTO */
+.row .col50 {
+    position: relative;
+    width: 48%;
+}
+
+/* TAMANHO DO TEXTO E COR */
+.titleText {
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+/* TAMANHO DA LETRA 'A' */
+.titleText span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+/* IMG */
+.row .col50 .imgBx {
+    position: relative;
+    width: 100%;
+    /* min-height: 300px; */
+    height: 100%;
+}
+
+/* TAMANHO DA IMAGEM E SUA POSIÇAO */
+.row .col50 .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CENTRALIZANDO OS ITENS E COLOCANDO EM COLUNA */
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* CENTREALIZANDO OS ITEM E FORMANDO 2 COLUNAS COM IMAGENS */
+.menu .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* COLOCANDO FUNDO E BORDAS NA IMAGENS, E FUNDO NO TEXTO */
+.menu .content .box {
+    width: 340px;
+    margin: 20px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* IMG E TEXTOS E SUAS POSIÇOES E TAMANHO */
+.menu .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.menu .content .box .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ESPAÇAMENTO DO TEXTO DA IMAGEM */
+.menu .content .box .text {
+    padding: 15px 0 5px;
+}
+
+/* TAMANHO DA FONTE E COR */
+.menu .content .box .text h3 {
+    font-weight: 400;
+    color: #111;
+}
+
+/* COLOLUNAS DE IMAGENS CENTRALIZADAS */
+.expert .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+/* TAMANHO DAS IMAGENS E TEXTO E SUAS POSIÇOES */
+.expert .content .box {
+    width: 250px;
+    margin: 15px;
+}
+
+.expert .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.expert .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ESPAÇAMENTO DO TEXTO DA IMAGEM */
+.expert .content .box .text {
+    padding: 15px 0 5px;
+}
+
+/* TAMANHO DO TEXTO E COR */
+.expert .content .box .text h3 {
+    font-weight: 400;
+    color: #111;
+}
+
+.testimonials {
+    background: url(./images/bg2.jpg);
+}
+
+/* COR DO TITUTLO E SUBTEXTO */
+.white .titleText,
+.white p {
+    color: #fff;
+}
+
+/* POSICIONAMENTO DOS ITENS */
+.testimonials .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+/* POSICIONANDO OS ITENS NO CENTRO E DONTRO DA BARRA DENTRAL BRANCA */
+.testimonials .content .box {
+    width: 340px;
+    margin: 20px;
+    padding: 40px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*  CRIANDO O CIRCULO, DEIXANDO A IMAGEM EM FORMATO DE CIRCULO */
+.testimonials .content .box .imgBx {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* CENTRALIZANDO A IMAGEM NO CIRCULO */
+.testimonials .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ESTILIZANDO AS INFORMAÇÕES QUE VÃO SE ENCONTRAR NA FOTO */
+.testimonials .content .box .text {
+    text-align: center;
+}
+
+/* FONTE E COR */
+.testimonials .content .box .text p {
+    color: #666;
+    font-style: italic;
+}
+
+/* COR E TAMAHO DA FONTE */
+.testimonials .content .box .text h3 {
+    margin-top: 20px;
+    color: #111;
+    font-size: 1em;
+    color: #ff0157;
+    font-weight: 600;
+}
+
+/* IMAGEM RODA PE E SEU TAMANHO */
+.contact {
+    background: url(./images/bg3.jpg);
+    background-size: cover;
+}
+
+/* QUADRADO QUE FUNDO NOME E EMAIL */
+.contactFrom {
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+/* TEXTO */
+.contactFrom h3 {
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* INPUTS DE CADASTRO DO USUÁRIO */
+.contactFrom .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* BOTAO PARA O ICONE E BOX */
+.contactFrom .inputBox input,
+.contactFrom .inputBox textarea {
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+
+/* COR DO BOTAO, LETRA E FUNDO, ANIMAÇAO */
+.contactFrom .inputBox input[type="submit"] {
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    text-transform: uppercase; 
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+/* CENTRALIZANDO O RODA PE,COR E CENTRALIZAÇAO */
+.copyrightText {
+    padding: 8px 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.copyrightText p {
+    color: #333;
+}
+
+.copyrightText a {
+    color: #ff0157;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* CONFIGURAÇAO DA PAG, EM UM TAMANHO MENOR */
+@media (max-width: 991px) {
+    header, header.stricky {
+        padding: 10px 20px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+
+    header .navigation li {
+        list-style: none;
+        margin-left: 0;
+    }
+
+    header .navigation li a {
+        color: #111;
+        font-size: 1.6em;
+    }
+
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(./images/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .menuToggle.active {
+        background: url(./images/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    header.sticky .menuToggle {
+        filter: invert(1);
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .banner .content h2 {
+        font-size: 3em;
+        color: #fff;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row .col50 {
+        position: relative;
+        width: 100%;
+    }
+
+    .row .col50 .imgBx {
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    .menu .content {
+        margin-top: 20px;
+    }
+
+    .menu .content .box {
+        margin: 10px;
+    }
+
+    .menu .content .box .imgBx {
+        height: 260px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .titleText {
+        font-size: 1.8em;
+        line-height: 1.5em;
+        margin-bottom: 15px;
+        font-weight: 300;
+    }
+
+    .testimonials .content .box {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .contactFrom {
+        padding: 35px 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 480px) {
+        .banner .content h2 {
+            font-size: 2.2em;
+            color: #fff;     
+        }
+    }
+}
